@@ -10,7 +10,9 @@
         "lint": "eslint ."
     },
     "dependencies": {
+        "final-form": "^4.19.1",
         "react": "16.11.0",
+        "react-final-form": "^6.4.0",
         "react-native": "0.62.2"
     },
     "devDependencies": {
@@ -30,6 +32,15 @@
         "typescript": "^3.8.3"
     },
     "jest": {
-        "preset": "react-native"
+        "preset": "react-native",
+        "verbose": true,
+        "moduleFileExtensions": [
+            "ts",
+            "tsx",
+            "js",
+            "jsx",
+            "json",
+            "node"
+        ]
     }
 }
