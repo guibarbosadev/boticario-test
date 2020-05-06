@@ -10,7 +10,8 @@
         "noEmit": true,
         "strict": true,
         "target": "esnext",
-        "noUnusedLocals": false
+        "noUnusedLocals": false,
+        "noImplicitAny": false
     },
     "exclude": [
         "node_modules",
