@@ -1,8 +1,14 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { View } from 'react-native';
+import SignUpForm from '../../components/sign-up-form';
+import styles from './styles';
 
 const SignUpPage: React.FC<{}> = () => {
-    return <Text>SignUpPag</Text>;
+    return (
+        <View style={styles.container}>
+            <SignUpForm />
+        </View>
+    );
 };
 
 export default SignUpPage;

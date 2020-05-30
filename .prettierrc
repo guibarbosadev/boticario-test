@@ -4,5 +4,5 @@
     "jsxBracketSameLine": true,
     "singleQuote": true,
     "trailingComma": "none",
-    "arrowParens": "always",
+    "arrowParens": "always"
 }
