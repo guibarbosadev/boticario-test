@@ -5,7 +5,7 @@ import {
     Middleware
 } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-import auth from './auth/AuthReducers';
+import auth, { AuthInitialState } from './auth/AuthReducers';
 import sagas from './sagas';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
@@ -17,9 +17,13 @@ function bindMiddleware(middlewares: Middleware[]) {
     return applyMiddleware(...middlewares);
 }
 
+export interface RootInitialState {
+    auth: AuthInitialState;
+}
+
 export default function generateStore() {
     const sagaMiddleware = createSagaMiddleware();
-    const reducers = combineReducers({ auth });
+    const reducers = combineReducers<RootInitialState>({ auth });
     const store = createStore(reducers, bindMiddleware([sagaMiddleware]));
 
     sagaMiddleware.run(sagas);

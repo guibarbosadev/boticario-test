@@ -5,6 +5,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import LoginPage from './pages/Login';
 import SignUpPage from './pages/SignUp';
 import generateStore from './store';
+import HomePage from './pages/Home';
 
 const StackNavigator = createStackNavigator(
     {
@@ -12,8 +13,10 @@ const StackNavigator = createStackNavigator(
             screen: LoginPage
         },
         SignUp: {
-            screen: SignUpPage,
-            path: '/signup'
+            screen: SignUpPage
+        },
+        Home: {
+            screen: HomePage
         }
     },
     {
