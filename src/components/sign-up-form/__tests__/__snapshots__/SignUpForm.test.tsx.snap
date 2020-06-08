@@ -5,7 +5,7 @@ Array [
   <TextInput
     allowFontScaling={true}
     onChangeText={[Function]}
-    placeholder="Name"
+    placeholder="Nome"
     rejectResponderTermination={true}
     underlineColorAndroid="transparent"
     value=""

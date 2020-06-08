@@ -7,6 +7,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import styles from './styles';
 import { RootInitialState } from '../../store';
 
+export interface LoginPageProps extends NavigationStackScreenProps {}
+
 const LoginPage: React.FC<NavigationStackScreenProps> = ({ navigation }) => {
     const dispatch = useDispatch();
     const currentUser = useSelector<RootInitialState>(

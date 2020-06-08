@@ -30,22 +30,28 @@ export interface SignUpFormProps {
     initialValues?: SignUpFormValues;
 }
 
-const SignUpForm: React.FC<SignUpFormProps> = ({ onSubmit, initialValues }) => {
-    const nameInput = renderInput('name', { placeholder: 'Name' }, [
-        required()
-    ]);
-    const emailInput = renderInput('email', emailProps, [email()]);
-    const passwordInput = renderInput('password', passwordProps, [required()]);
+function NameInput() {
+    return renderInput('name', { placeholder: 'Nome' }, [required()]);
+}
 
+function EmailInput() {
+    return renderInput('email', emailProps, [email()]);
+}
+
+function PasswordInput() {
+    return renderInput('password', passwordProps, [required()]);
+}
+
+const SignUpForm: React.FC<SignUpFormProps> = ({ onSubmit, initialValues }) => {
     return (
         <Form
             onSubmit={(values) => onSubmit && onSubmit(values)}
             initialValues={initialValues}
             render={({ handleSubmit }) => (
                 <>
-                    {nameInput}
-                    {emailInput}
-                    {passwordInput}
+                    <NameInput />
+                    <EmailInput />
+                    <PasswordInput />
                     <Button
                         title="Cadastrar-se"
                         testID="submit-button"

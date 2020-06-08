@@ -13,7 +13,9 @@ describe('SignUpForm | Component', () => {
         const { queryByPlaceholder } = render(<SignUpForm />);
         const placeholders = ['Nome', 'Email', 'Senha'];
 
-        placeholders.forEach(queryByPlaceholder);
+        placeholders.forEach((placeholder) => {
+            expect(queryByPlaceholder(placeholder)).toBeTruthy();
+        });
     });
 
     it('renders submit button', () => {
